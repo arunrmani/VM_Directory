@@ -16,8 +16,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-Iz-B35">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CSi-Ho-Dls">
+                                <rect key="frame" x="114" y="145" width="186" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g87-Bp-jEa">
+                                <rect key="frame" x="36" y="316" width="342" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9s-De-vMK">
+                                <rect key="frame" x="163" y="809" width="88" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1WW-Iz-B35" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="U5s-Qj-2uV"/>
+                            <constraint firstItem="1WW-Iz-B35" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XFa-xR-pSu"/>
+                            <constraint firstItem="1WW-Iz-B35" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cU1-Bv-XX1"/>
+                            <constraint firstAttribute="bottom" secondItem="1WW-Iz-B35" secondAttribute="bottom" id="r8C-uB-F8t"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hVE-X1-cKJ"/>
                     <connections>
