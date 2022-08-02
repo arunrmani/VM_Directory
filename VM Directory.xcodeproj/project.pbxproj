@@ -24,6 +24,8 @@
 		AEC57FF62898FAC100586876 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF52898FAC100586876 /* ContactDetailsViewController.swift */; };
 		AEC57FF82898FAD100586876 /* ContactDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF72898FAD100586876 /* ContactDetailsViewModel.swift */; };
 		AEC57FFA2898FB3B00586876 /* HomePageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF92898FB3B00586876 /* HomePageTests.swift */; };
+		AEC57FFC2898FE3F00586876 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FFB2898FE3F00586876 /* Contacts.swift */; };
+		AEC57FFE2898FE9500586876 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FFD2898FE9500586876 /* Rooms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		AEC57FF52898FAC100586876 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		AEC57FF72898FAD100586876 /* ContactDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewModel.swift; sourceTree = "<group>"; };
 		AEC57FF92898FB3B00586876 /* HomePageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTests.swift; sourceTree = "<group>"; };
+		AEC57FFB2898FE3F00586876 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		AEC57FFD2898FE9500586876 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 		AE237D532897E1CC00E14DE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AEC57FFB2898FE3F00586876 /* Contacts.swift */,
+				AEC57FFD2898FE9500586876 /* Rooms.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,10 +346,12 @@
 			files = (
 				AE237D5A2897E53C00E14DE7 /* Observable.swift in Sources */,
 				AE237D282897DB5400E14DE7 /* LaunchViewController.swift in Sources */,
+				AEC57FFE2898FE9500586876 /* Rooms.swift in Sources */,
 				AEC57FF62898FAC100586876 /* ContactDetailsViewController.swift in Sources */,
 				AE237D242897DB5400E14DE7 /* AppDelegate.swift in Sources */,
 				AEC57FF82898FAD100586876 /* ContactDetailsViewModel.swift in Sources */,
 				AE237D622897E96E00E14DE7 /* HomeViewModel.swift in Sources */,
+				AEC57FFC2898FE3F00586876 /* Contacts.swift in Sources */,
 				AE237D5E2897E6EB00E14DE7 /* AppConstant.swift in Sources */,
 				AE237D5C2897E58F00E14DE7 /* LaunchViewModel.swift in Sources */,
 				AE237D602897E7B300E14DE7 /* HomeViewController.swift in Sources */,
