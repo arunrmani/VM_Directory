@@ -16,6 +16,14 @@
 		AE237D3B2897DB5800E14DE7 /* VM_DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D3A2897DB5800E14DE7 /* VM_DirectoryTests.swift */; };
 		AE237D452897DB5800E14DE7 /* VM_DirectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D442897DB5800E14DE7 /* VM_DirectoryUITests.swift */; };
 		AE237D472897DB5800E14DE7 /* VM_DirectoryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D462897DB5800E14DE7 /* VM_DirectoryUITestsLaunchTests.swift */; };
+		AE237D5A2897E53C00E14DE7 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D592897E53C00E14DE7 /* Observable.swift */; };
+		AE237D5C2897E58F00E14DE7 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D5B2897E58F00E14DE7 /* LaunchViewModel.swift */; };
+		AE237D5E2897E6EB00E14DE7 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */; };
+		AE237D602897E7B300E14DE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D5F2897E7B300E14DE7 /* HomeViewController.swift */; };
+		AE237D622897E96E00E14DE7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D612897E96E00E14DE7 /* HomeViewModel.swift */; };
+		AEC57FF62898FAC100586876 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF52898FAC100586876 /* ContactDetailsViewController.swift */; };
+		AEC57FF82898FAD100586876 /* ContactDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF72898FAD100586876 /* ContactDetailsViewModel.swift */; };
+		AEC57FFA2898FB3B00586876 /* HomePageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF92898FB3B00586876 /* HomePageTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		AE237D402897DB5800E14DE7 /* VM DirectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VM DirectoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE237D442897DB5800E14DE7 /* VM_DirectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_DirectoryUITests.swift; sourceTree = "<group>"; };
 		AE237D462897DB5800E14DE7 /* VM_DirectoryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_DirectoryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AE237D592897E53C00E14DE7 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		AE237D5B2897E58F00E14DE7 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		AE237D5F2897E7B300E14DE7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AE237D612897E96E00E14DE7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AEC57FF52898FAC100586876 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		AEC57FF72898FAD100586876 /* ContactDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewModel.swift; sourceTree = "<group>"; };
+		AEC57FF92898FB3B00586876 /* HomePageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +117,10 @@
 			children = (
 				AE237D232897DB5400E14DE7 /* AppDelegate.swift */,
 				AE237D252897DB5400E14DE7 /* SceneDelegate.swift */,
-				AE237D272897DB5400E14DE7 /* LaunchViewController.swift */,
+				AE237D532897E1CC00E14DE7 /* Model */,
+				AE237D552897E1E800E14DE7 /* View */,
+				AE237D542897E1DC00E14DE7 /* ViewModel */,
+				AE237D562897E1FF00E14DE7 /* Supporting */,
 				AE237D292897DB5400E14DE7 /* Main.storyboard */,
 				AE237D2C2897DB5700E14DE7 /* Assets.xcassets */,
 				AE237D2E2897DB5700E14DE7 /* LaunchScreen.storyboard */,
@@ -114,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				AE237D3A2897DB5800E14DE7 /* VM_DirectoryTests.swift */,
+				AEC57FF92898FB3B00586876 /* HomePageTests.swift */,
 			);
 			path = "VM DirectoryTests";
 			sourceTree = "<group>";
@@ -125,6 +145,66 @@
 				AE237D462897DB5800E14DE7 /* VM_DirectoryUITestsLaunchTests.swift */,
 			);
 			path = "VM DirectoryUITests";
+			sourceTree = "<group>";
+		};
+		AE237D532897E1CC00E14DE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE237D542897E1DC00E14DE7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE237D572897E22400E14DE7 /* Launch */,
+				AE237D582897E23400E14DE7 /* Home */,
+				AEC57FF42898FA9D00586876 /* ContactDetails */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AE237D552897E1E800E14DE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE237D562897E1FF00E14DE7 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				AE237D592897E53C00E14DE7 /* Observable.swift */,
+				AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		AE237D572897E22400E14DE7 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				AE237D272897DB5400E14DE7 /* LaunchViewController.swift */,
+				AE237D5B2897E58F00E14DE7 /* LaunchViewModel.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		AE237D582897E23400E14DE7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AE237D5F2897E7B300E14DE7 /* HomeViewController.swift */,
+				AE237D612897E96E00E14DE7 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AEC57FF42898FA9D00586876 /* ContactDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AEC57FF52898FAC100586876 /* ContactDetailsViewController.swift */,
+				AEC57FF72898FAD100586876 /* ContactDetailsViewModel.swift */,
+			);
+			path = ContactDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +338,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE237D5A2897E53C00E14DE7 /* Observable.swift in Sources */,
 				AE237D282897DB5400E14DE7 /* LaunchViewController.swift in Sources */,
+				AEC57FF62898FAC100586876 /* ContactDetailsViewController.swift in Sources */,
 				AE237D242897DB5400E14DE7 /* AppDelegate.swift in Sources */,
+				AEC57FF82898FAD100586876 /* ContactDetailsViewModel.swift in Sources */,
+				AE237D622897E96E00E14DE7 /* HomeViewModel.swift in Sources */,
+				AE237D5E2897E6EB00E14DE7 /* AppConstant.swift in Sources */,
+				AE237D5C2897E58F00E14DE7 /* LaunchViewModel.swift in Sources */,
+				AE237D602897E7B300E14DE7 /* HomeViewController.swift in Sources */,
 				AE237D262897DB5400E14DE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE237D3B2897DB5800E14DE7 /* VM_DirectoryTests.swift in Sources */,
+				AEC57FFA2898FB3B00586876 /* HomePageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +589,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B85947FUR5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "arm.VM-DirectoryTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,7 +609,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B85947FUR5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "arm.VM-DirectoryTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,6 +628,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B85947FUR5;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "arm.VM-DirectoryUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -558,6 +647,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B85947FUR5;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "arm.VM-DirectoryUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
