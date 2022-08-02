@@ -13,6 +13,9 @@ class VM_LaunchTests: XCTestCase {
     func test_canInit() throws{
         _ = try makeSUT()
     }
+    
+    
+    
 
 }
 

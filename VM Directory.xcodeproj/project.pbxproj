@@ -21,8 +21,16 @@
 		AE237D5E2897E6EB00E14DE7 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */; };
 		AE237D602897E7B300E14DE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D5F2897E7B300E14DE7 /* HomeViewController.swift */; };
 		AE237D622897E96E00E14DE7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D612897E96E00E14DE7 /* HomeViewModel.swift */; };
-		AE383F5B2899233B0031E7B1 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = AE383F5A2899233B0031E7B1 /* sample.json */; };
+		AE383F5B2899233B0031E7B1 /* sampleQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = AE383F5A2899233B0031E7B1 /* sampleQuotes.json */; };
 		AE759657289947D6002CBE25 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE759656289947D6002CBE25 /* Quotes.swift */; };
+		AE759659289951CD002CBE25 /* Extension-Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE759658289951CD002CBE25 /* Extension-Array.swift */; };
+		AE75965C289953FD002CBE25 /* JosefinSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE75965B289953FD002CBE25 /* JosefinSlab-Regular.ttf */; };
+		AE75965D289953FD002CBE25 /* JosefinSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE75965B289953FD002CBE25 /* JosefinSlab-Regular.ttf */; };
+		AE75965E289953FD002CBE25 /* JosefinSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE75965B289953FD002CBE25 /* JosefinSlab-Regular.ttf */; };
+		AE75966328995468002CBE25 /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE75965F28995468002CBE25 /* Inter-Regular.otf */; };
+		AE75966428995468002CBE25 /* Inter-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE75966028995468002CBE25 /* Inter-ExtraLight.otf */; };
+		AE75966528995468002CBE25 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE75966128995468002CBE25 /* Inter-Bold.otf */; };
+		AE75966628995468002CBE25 /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE75966228995468002CBE25 /* Inter-Light.otf */; };
 		AEC57FF62898FAC100586876 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF52898FAC100586876 /* ContactDetailsViewController.swift */; };
 		AEC57FF82898FAD100586876 /* ContactDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF72898FAD100586876 /* ContactDetailsViewModel.swift */; };
 		AEC57FFA2898FB3B00586876 /* HomePageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF92898FB3B00586876 /* HomePageTests.swift */; };
@@ -66,8 +74,14 @@
 		AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		AE237D5F2897E7B300E14DE7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AE237D612897E96E00E14DE7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		AE383F5A2899233B0031E7B1 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		AE383F5A2899233B0031E7B1 /* sampleQuotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleQuotes.json; sourceTree = "<group>"; };
 		AE759656289947D6002CBE25 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		AE759658289951CD002CBE25 /* Extension-Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Array.swift"; sourceTree = "<group>"; };
+		AE75965B289953FD002CBE25 /* JosefinSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSlab-Regular.ttf"; sourceTree = "<group>"; };
+		AE75965F28995468002CBE25 /* Inter-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
+		AE75966028995468002CBE25 /* Inter-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.otf"; sourceTree = "<group>"; };
+		AE75966128995468002CBE25 /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
+		AE75966228995468002CBE25 /* Inter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.otf"; sourceTree = "<group>"; };
 		AEC57FF52898FAC100586876 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		AEC57FF72898FAD100586876 /* ContactDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewModel.swift; sourceTree = "<group>"; };
 		AEC57FF92898FB3B00586876 /* HomePageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTests.swift; sourceTree = "<group>"; };
@@ -158,10 +172,11 @@
 		AE237D532897E1CC00E14DE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE75965A28995374002CBE25 /* Fonts */,
 				AEC57FFB2898FE3F00586876 /* Contacts.swift */,
 				AEC57FFD2898FE9500586876 /* Rooms.swift */,
 				AE759656289947D6002CBE25 /* Quotes.swift */,
-				AE383F5A2899233B0031E7B1 /* sample.json */,
+				AE383F5A2899233B0031E7B1 /* sampleQuotes.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +203,7 @@
 			children = (
 				AE237D592897E53C00E14DE7 /* Observable.swift */,
 				AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */,
+				AE759658289951CD002CBE25 /* Extension-Array.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -208,6 +224,18 @@
 				AE237D612897E96E00E14DE7 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		AE75965A28995374002CBE25 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AE75965B289953FD002CBE25 /* JosefinSlab-Regular.ttf */,
+				AE75966128995468002CBE25 /* Inter-Bold.otf */,
+				AE75966028995468002CBE25 /* Inter-ExtraLight.otf */,
+				AE75966228995468002CBE25 /* Inter-Light.otf */,
+				AE75965F28995468002CBE25 /* Inter-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AEC57FF42898FA9D00586876 /* ContactDetails */ = {
@@ -324,9 +352,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE237D302897DB5700E14DE7 /* LaunchScreen.storyboard in Resources */,
-				AE383F5B2899233B0031E7B1 /* sample.json in Resources */,
+				AE75966628995468002CBE25 /* Inter-Light.otf in Resources */,
+				AE75966428995468002CBE25 /* Inter-ExtraLight.otf in Resources */,
+				AE75966328995468002CBE25 /* Inter-Regular.otf in Resources */,
+				AE383F5B2899233B0031E7B1 /* sampleQuotes.json in Resources */,
 				AE237D2D2897DB5700E14DE7 /* Assets.xcassets in Resources */,
+				AE75966528995468002CBE25 /* Inter-Bold.otf in Resources */,
 				AE237D2B2897DB5400E14DE7 /* Main.storyboard in Resources */,
+				AE75965C289953FD002CBE25 /* JosefinSlab-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE75965D289953FD002CBE25 /* JosefinSlab-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE75965E289953FD002CBE25 /* JosefinSlab-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +395,7 @@
 				AEC57FF82898FAD100586876 /* ContactDetailsViewModel.swift in Sources */,
 				AE237D622897E96E00E14DE7 /* HomeViewModel.swift in Sources */,
 				AEC57FFC2898FE3F00586876 /* Contacts.swift in Sources */,
+				AE759659289951CD002CBE25 /* Extension-Array.swift in Sources */,
 				AE237D5E2897E6EB00E14DE7 /* AppConstant.swift in Sources */,
 				AE237D5C2897E58F00E14DE7 /* LaunchViewModel.swift in Sources */,
 				AE237D602897E7B300E14DE7 /* HomeViewController.swift in Sources */,
