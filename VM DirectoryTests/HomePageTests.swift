@@ -20,6 +20,21 @@ class HomePageTests: XCTestCase {
         XCTAssertNotNil(sut.tableView.delegate,"TableView deligate is nil")
         XCTAssertNotNil(sut.tableView.dataSource,"TableView dataSourse is nil")
     }
+    
+    func test_ViewModelInitialState(){
+        let vm = HomeViewModel()
+        
+        XCTAssertFalse(vm.goTodetails.value)
+        XCTAssertEqual(vm.contactListCount, 0)
+        XCTAssertEqual(vm.roomsListCount, 0)
+        XCTAssertNil(vm.selectedContact.value)
+        XCTAssertNil(vm.getContact(at:0))
+        XCTAssertNil(vm.getRoom(at:0))
+
+    }
+    
+    
+    
 
 }
 

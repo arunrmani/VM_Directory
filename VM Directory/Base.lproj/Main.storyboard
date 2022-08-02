@@ -40,6 +40,10 @@
                                 <rect key="frame" x="0.0" y="108" width="414" height="766"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BGY-m7-GxW" id="zka-iE-S00"/>
+                                    <outlet property="delegate" destination="BGY-m7-GxW" id="gFO-eW-35E"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xLo-TP-6gE"/>
@@ -47,6 +51,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="twx-iQ-4hw"/>
                     <connections>
+                        <outlet property="tableView" destination="9sS-VS-rbh" id="A5y-OM-60m"/>
                         <segue destination="7AE-Z1-y07" kind="show" identifier="HomeToContactDetails" id="kNb-gk-dTO"/>
                     </connections>
                 </viewController>
