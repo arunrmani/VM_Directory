@@ -46,6 +46,7 @@
 		AEDAB8F5289A5D1B001274A5 /* ARMLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8F3289A5D1B001274A5 /* ARMLoaderView.swift */; };
 		AEDAB8F6289A5D1B001274A5 /* ARMLoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDAB8F4289A5D1B001274A5 /* ARMLoaderView.xib */; };
 		AEDAB8F8289A6D49001274A5 /* Extension-UiimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8F7289A6D49001274A5 /* Extension-UiimageView.swift */; };
+		AEDAB8FA289A8A3F001274A5 /* Extension-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8F9289A8A3F001274A5 /* Extension-String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		AEDAB8F3289A5D1B001274A5 /* ARMLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARMLoaderView.swift; sourceTree = "<group>"; };
 		AEDAB8F4289A5D1B001274A5 /* ARMLoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARMLoaderView.xib; sourceTree = "<group>"; };
 		AEDAB8F7289A6D49001274A5 /* Extension-UiimageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-UiimageView.swift"; sourceTree = "<group>"; };
+		AEDAB8F9289A8A3F001274A5 /* Extension-String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 				AEDAB8E2289A499C001274A5 /* Extention-View.swift */,
 				AEDAB8EB289A4F29001274A5 /* Extension+ViewController.swift */,
 				AEDAB8F7289A6D49001274A5 /* Extension-UiimageView.swift */,
+				AEDAB8F9289A8A3F001274A5 /* Extension-String.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			files = (
 				AE237D5A2897E53C00E14DE7 /* Observable.swift in Sources */,
 				AEDAB8E3289A499C001274A5 /* Extention-View.swift in Sources */,
+				AEDAB8FA289A8A3F001274A5 /* Extension-String.swift in Sources */,
 				AE237D282897DB5400E14DE7 /* LaunchViewController.swift in Sources */,
 				AEDAB8E7289A4AA7001274A5 /* APIClient.swift in Sources */,
 				AEC57FFE2898FE9500586876 /* Rooms.swift in Sources */,

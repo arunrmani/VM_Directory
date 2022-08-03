@@ -27,7 +27,7 @@ class RoomsTableViewCell: UITableViewCell {
     func setCellData(data : Rooms){
         self.lbl_roomId.text = data.id ?? ""
         self.lbl_date.text = data.getDate()
-        self.lbl_maxOcc.text = "\(data.maxOccupancy ?? 0)"
+        self.lbl_maxOcc.text = "Max: \(data.maxOccupancy ?? 0)"
 
         self.image_availability.image = data.getImageAvailability()
         

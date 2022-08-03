@@ -106,26 +106,43 @@ extension HomeViewController: UITableViewDataSource ,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.homeVM.selectedType.value == .contacts{
-            let cell = tableView.dequeueReusableCell(withIdentifier: ContactListTableViewCell.identifier, for: indexPath) as! ContactListTableViewCell
-            if let contactData = self.homeVM.getContact(at: indexPath.row){
-                cell.setCellData(data: contactData)
-            }
-            return cell
-        }
-        else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: RoomsTableViewCell.identifier, for: indexPath) as! RoomsTableViewCell
-            if let roomData = self.homeVM.getRoom(at: indexPath.row){
-                cell.setCellData(data: roomData)
-            }
-            return cell
+        
+        switch self.homeVM.selectedType.value{
+            case .contacts:
+                let cell = tableView.dequeueReusableCell(withIdentifier: ContactListTableViewCell.identifier, for: indexPath) as! ContactListTableViewCell
+                if let contactData = self.homeVM.getContact(at: indexPath.row){
+                    cell.setCellData(data: contactData)
+                }
+                return cell
+            case .rooms:
+                let cell = tableView.dequeueReusableCell(withIdentifier: RoomsTableViewCell.identifier, for: indexPath) as! RoomsTableViewCell
+                if let roomData = self.homeVM.getRoom(at: indexPath.row){
+                    cell.setCellData(data: roomData)
+                }
+                return cell
+            case .none:
+                let cell = tableView.dequeueReusableCell(withIdentifier: ContactListTableViewCell.identifier, for: indexPath) as! ContactListTableViewCell
+                if let contactData = self.homeVM.getContact(at: indexPath.row){
+                    cell.setCellData(data: contactData)
+                }
+                return cell
+                
         }
         
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.homeVM.selectContact(index: indexPath.row)
+       
+        switch self.homeVM.selectedType.value{
+            case .contacts:
+                self.homeVM.selectContact(index: indexPath.row)
+            case .rooms:
+                print("Room Selected")
+            case .none:
+                print("none")
+
+        }
     }
     
 }

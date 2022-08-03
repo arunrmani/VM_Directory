@@ -15,7 +15,7 @@ struct Rooms: Codable{
     var id: String?
     
     func getDate() -> String{
-        return self.createdAt ?? ""
+        return (self.createdAt ?? "").toString(dateFormat: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
     }
     
     func getImageAvailability() -> UIImage{
