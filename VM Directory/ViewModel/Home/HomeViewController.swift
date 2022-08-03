@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     
     
 }
-    // MARK: - VM
+    // MARK: - VM Binding
 
 extension HomeViewController{
     private func bindviewModel(){

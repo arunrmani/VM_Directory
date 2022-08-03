@@ -13,8 +13,43 @@ class VM_LaunchTests: XCTestCase {
     func test_canInit() throws{
         _ = try makeSUT()
     }
+    func test_launchViewModel() throws{
+        let vm = LaunchViewModel()
+        //initValue
+        XCTAssertEqual(vm.quoteStr.value, "")
+        XCTAssertEqual(vm.quoteAuthorStr.value, "")
+        XCTAssertEqual(vm.finishLaunchAnimation.value, false)
+        XCTAssertEqual(vm.isNetworkAvailable.value, true)
+        vm.startLaunchAnimation()
+        XCTAssertEqual(vm.isNetworkAvailable.value, true)
+        XCTAssertGreaterThan(vm.quoteStr.value.count, 0)
+        XCTAssertGreaterThan(vm.quoteAuthorStr.value.count, 0)
+
+        vm.goToNextViewController()
+        XCTAssertEqual(vm.isNetworkAvailable.value, vm.finishLaunchAnimation.value)
+    }
     
+    func test_bindingValues() throws{
+        let sut = try makeSUT()
+        sut.loadViewIfNeeded()
+        sut.launchVM.quoteStr.value = "Sample quote"
+        XCTAssertEqual(sut.lbl_quotes.text, "Sample quote")
+        sut.launchVM.quoteAuthorStr.value = "Sample Autor"
+        XCTAssertEqual(sut.lbl_quotesAuthor.text, "Sample Autor")
+
+        
+    }
     
+    func test_skipBtnAction() throws{
+        let sut = try makeSUT()
+        sut.loadViewIfNeeded()
+        sut.launchVM.startLaunchAnimation()
+        let btn = UIButton()
+        sut.skipBtnAction(btn)
+        
+        XCTAssertEqual(sut.launchVM.isNetworkAvailable.value, sut.launchVM.finishLaunchAnimation.value)
+
+    }
     
 
 }

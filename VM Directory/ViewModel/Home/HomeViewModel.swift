@@ -53,3 +53,12 @@ class HomeViewModel{
         }
     }
 }
+
+
+// MARK: - API Call
+
+extension HomeViewModel{
+    func getContactListAPI(){
+        
+    }
+}

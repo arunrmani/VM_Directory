@@ -36,6 +36,13 @@
 		AEC57FFA2898FB3B00586876 /* HomePageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FF92898FB3B00586876 /* HomePageTests.swift */; };
 		AEC57FFC2898FE3F00586876 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FFB2898FE3F00586876 /* Contacts.swift */; };
 		AEC57FFE2898FE9500586876 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC57FFD2898FE9500586876 /* Rooms.swift */; };
+		AEDAB8E3289A499C001274A5 /* Extention-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8E2289A499C001274A5 /* Extention-View.swift */; };
+		AEDAB8E7289A4AA7001274A5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8E5289A4AA7001274A5 /* APIClient.swift */; };
+		AEDAB8E8289A4AA7001274A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8E6289A4AA7001274A5 /* Reachability.swift */; };
+		AEDAB8EA289A4AF2001274A5 /* APICustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8E9289A4AF2001274A5 /* APICustomError.swift */; };
+		AEDAB8EC289A4F29001274A5 /* Extension+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8EB289A4F29001274A5 /* Extension+ViewController.swift */; };
+		AEDAB8EE289A5C07001274A5 /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8ED289A5C07001274A5 /* ContactListTableViewCell.swift */; };
+		AEDAB8F1289A5C31001274A5 /* RoomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8F0289A5C31001274A5 /* RoomsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +94,13 @@
 		AEC57FF92898FB3B00586876 /* HomePageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTests.swift; sourceTree = "<group>"; };
 		AEC57FFB2898FE3F00586876 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		AEC57FFD2898FE9500586876 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
+		AEDAB8E2289A499C001274A5 /* Extention-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention-View.swift"; sourceTree = "<group>"; };
+		AEDAB8E5289A4AA7001274A5 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		AEDAB8E6289A4AA7001274A5 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		AEDAB8E9289A4AF2001274A5 /* APICustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICustomError.swift; sourceTree = "<group>"; };
+		AEDAB8EB289A4F29001274A5 /* Extension+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+ViewController.swift"; sourceTree = "<group>"; };
+		AEDAB8ED289A5C07001274A5 /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
+		AEDAB8F0289A5C31001274A5 /* RoomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,9 +215,12 @@
 		AE237D562897E1FF00E14DE7 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				AEDAB8E4289A4AA7001274A5 /* API Client */,
 				AE237D592897E53C00E14DE7 /* Observable.swift */,
 				AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */,
 				AE759658289951CD002CBE25 /* Extension-Array.swift */,
+				AEDAB8E2289A499C001274A5 /* Extention-View.swift */,
+				AEDAB8EB289A4F29001274A5 /* Extension+ViewController.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -220,6 +237,7 @@
 		AE237D582897E23400E14DE7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AEDAB8EF289A5C11001274A5 /* Cell */,
 				AE237D5F2897E7B300E14DE7 /* HomeViewController.swift */,
 				AE237D612897E96E00E14DE7 /* HomeViewModel.swift */,
 			);
@@ -245,6 +263,25 @@
 				AEC57FF72898FAD100586876 /* ContactDetailsViewModel.swift */,
 			);
 			path = ContactDetails;
+			sourceTree = "<group>";
+		};
+		AEDAB8E4289A4AA7001274A5 /* API Client */ = {
+			isa = PBXGroup;
+			children = (
+				AEDAB8E9289A4AF2001274A5 /* APICustomError.swift */,
+				AEDAB8E5289A4AA7001274A5 /* APIClient.swift */,
+				AEDAB8E6289A4AA7001274A5 /* Reachability.swift */,
+			);
+			path = "API Client";
+			sourceTree = "<group>";
+		};
+		AEDAB8EF289A5C11001274A5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AEDAB8ED289A5C07001274A5 /* ContactListTableViewCell.swift */,
+				AEDAB8F0289A5C31001274A5 /* RoomsTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,19 +424,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE237D5A2897E53C00E14DE7 /* Observable.swift in Sources */,
+				AEDAB8E3289A499C001274A5 /* Extention-View.swift in Sources */,
 				AE237D282897DB5400E14DE7 /* LaunchViewController.swift in Sources */,
+				AEDAB8E7289A4AA7001274A5 /* APIClient.swift in Sources */,
 				AEC57FFE2898FE9500586876 /* Rooms.swift in Sources */,
+				AEDAB8EA289A4AF2001274A5 /* APICustomError.swift in Sources */,
 				AEC57FF62898FAC100586876 /* ContactDetailsViewController.swift in Sources */,
+				AEDAB8E8289A4AA7001274A5 /* Reachability.swift in Sources */,
 				AE237D242897DB5400E14DE7 /* AppDelegate.swift in Sources */,
 				AE759657289947D6002CBE25 /* Quotes.swift in Sources */,
 				AEC57FF82898FAD100586876 /* ContactDetailsViewModel.swift in Sources */,
 				AE237D622897E96E00E14DE7 /* HomeViewModel.swift in Sources */,
+				AEDAB8F1289A5C31001274A5 /* RoomsTableViewCell.swift in Sources */,
 				AEC57FFC2898FE3F00586876 /* Contacts.swift in Sources */,
 				AE759659289951CD002CBE25 /* Extension-Array.swift in Sources */,
 				AE237D5E2897E6EB00E14DE7 /* AppConstant.swift in Sources */,
 				AE237D5C2897E58F00E14DE7 /* LaunchViewModel.swift in Sources */,
+				AEDAB8EE289A5C07001274A5 /* ContactListTableViewCell.swift in Sources */,
 				AE237D602897E7B300E14DE7 /* HomeViewController.swift in Sources */,
 				AE237D262897DB5400E14DE7 /* SceneDelegate.swift in Sources */,
+				AEDAB8EC289A4F29001274A5 /* Extension+ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

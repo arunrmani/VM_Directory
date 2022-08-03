@@ -44,5 +44,10 @@ extension LaunchViewController{
         launchVM.quoteAuthorStr.bind {[weak self] quotesAuthor in
             self?.lbl_quotesAuthor.text  = quotesAuthor
         }
+        launchVM.isNetworkAvailable.bind {[weak self] status in
+            if !status{
+                self?.showAlert(title: "Network Error", message: "Network Not Available, Please Check Your Internet Connection")
+            }
+        }
     }
 }
