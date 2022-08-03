@@ -496,13 +496,23 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quotes_board" translatesAutoresizingMaskIntoConstraints="NO" id="slZ-e7-Lnr">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="227.5"/>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f9C-oL-N2m">
+                                        <rect key="frame" x="79" y="35" width="156" height="158.5"/>
+                                        <color key="tintColor" name="vm_theame_color_offwhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="156" id="4MY-Mo-HlW"/>
+                                            <constraint firstAttribute="height" constant="161" id="RHJ-xx-9Yy"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="slZ-e7-Lnr" firstAttribute="top" secondItem="mee-81-knK" secondAttribute="top" id="1o3-ZI-c9G"/>
                                     <constraint firstAttribute="trailing" secondItem="slZ-e7-Lnr" secondAttribute="trailing" id="5Fl-3J-neT"/>
+                                    <constraint firstItem="f9C-oL-N2m" firstAttribute="centerY" secondItem="mee-81-knK" secondAttribute="centerY" id="Bn7-ah-ZQg"/>
                                     <constraint firstItem="slZ-e7-Lnr" firstAttribute="leading" secondItem="mee-81-knK" secondAttribute="leading" id="hAT-m3-C9F"/>
                                     <constraint firstAttribute="bottom" secondItem="slZ-e7-Lnr" secondAttribute="bottom" id="j4u-SB-ClX"/>
+                                    <constraint firstItem="f9C-oL-N2m" firstAttribute="centerX" secondItem="mee-81-knK" secondAttribute="centerX" id="jeT-o1-sCR"/>
                                     <constraint firstAttribute="width" secondItem="mee-81-knK" secondAttribute="height" multiplier="167:121" id="qFl-Pa-D7x"/>
                                 </constraints>
                             </view>
