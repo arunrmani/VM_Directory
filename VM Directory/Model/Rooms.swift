@@ -6,10 +6,19 @@
 //
 
 import Foundation
+import UIKit
 
 struct Rooms: Codable{
     var createdAt: String?
-    var isOccupied: String?
-    var maxOccupancy: String?
+    var isOccupied: Bool?
+    var maxOccupancy: Int?
     var id: String?
+    
+    func getDate() -> String{
+        return self.createdAt ?? ""
+    }
+    
+    func getImageAvailability() -> UIImage{
+        return isOccupied ?? false ?  UIImage(named: "room_sample_unavailable")! :  UIImage(named: "room_sample_available")!
+    }
 }

@@ -43,6 +43,9 @@
 		AEDAB8EC289A4F29001274A5 /* Extension+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8EB289A4F29001274A5 /* Extension+ViewController.swift */; };
 		AEDAB8EE289A5C07001274A5 /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8ED289A5C07001274A5 /* ContactListTableViewCell.swift */; };
 		AEDAB8F1289A5C31001274A5 /* RoomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8F0289A5C31001274A5 /* RoomsTableViewCell.swift */; };
+		AEDAB8F5289A5D1B001274A5 /* ARMLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8F3289A5D1B001274A5 /* ARMLoaderView.swift */; };
+		AEDAB8F6289A5D1B001274A5 /* ARMLoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDAB8F4289A5D1B001274A5 /* ARMLoaderView.xib */; };
+		AEDAB8F8289A6D49001274A5 /* Extension-UiimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAB8F7289A6D49001274A5 /* Extension-UiimageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		AEDAB8EB289A4F29001274A5 /* Extension+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+ViewController.swift"; sourceTree = "<group>"; };
 		AEDAB8ED289A5C07001274A5 /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
 		AEDAB8F0289A5C31001274A5 /* RoomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewCell.swift; sourceTree = "<group>"; };
+		AEDAB8F3289A5D1B001274A5 /* ARMLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARMLoaderView.swift; sourceTree = "<group>"; };
+		AEDAB8F4289A5D1B001274A5 /* ARMLoaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARMLoaderView.xib; sourceTree = "<group>"; };
+		AEDAB8F7289A6D49001274A5 /* Extension-UiimageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-UiimageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,12 +221,14 @@
 		AE237D562897E1FF00E14DE7 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				AEDAB8F2289A5D1B001274A5 /* LoaderView */,
 				AEDAB8E4289A4AA7001274A5 /* API Client */,
 				AE237D592897E53C00E14DE7 /* Observable.swift */,
 				AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */,
 				AE759658289951CD002CBE25 /* Extension-Array.swift */,
 				AEDAB8E2289A499C001274A5 /* Extention-View.swift */,
 				AEDAB8EB289A4F29001274A5 /* Extension+ViewController.swift */,
+				AEDAB8F7289A6D49001274A5 /* Extension-UiimageView.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -282,6 +290,15 @@
 				AEDAB8F0289A5C31001274A5 /* RoomsTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		AEDAB8F2289A5D1B001274A5 /* LoaderView */ = {
+			isa = PBXGroup;
+			children = (
+				AEDAB8F3289A5D1B001274A5 /* ARMLoaderView.swift */,
+				AEDAB8F4289A5D1B001274A5 /* ARMLoaderView.xib */,
+			);
+			path = LoaderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +409,7 @@
 				AE75966628995468002CBE25 /* Inter-Light.otf in Resources */,
 				AE75966428995468002CBE25 /* Inter-ExtraLight.otf in Resources */,
 				AE75966328995468002CBE25 /* Inter-Regular.otf in Resources */,
+				AEDAB8F6289A5D1B001274A5 /* ARMLoaderView.xib in Resources */,
 				AE383F5B2899233B0031E7B1 /* sampleQuotes.json in Resources */,
 				AE237D2D2897DB5700E14DE7 /* Assets.xcassets in Resources */,
 				AE75966528995468002CBE25 /* Inter-Bold.otf in Resources */,
@@ -439,6 +457,8 @@
 				AEC57FFC2898FE3F00586876 /* Contacts.swift in Sources */,
 				AE759659289951CD002CBE25 /* Extension-Array.swift in Sources */,
 				AE237D5E2897E6EB00E14DE7 /* AppConstant.swift in Sources */,
+				AEDAB8F8289A6D49001274A5 /* Extension-UiimageView.swift in Sources */,
+				AEDAB8F5289A5D1B001274A5 /* ARMLoaderView.swift in Sources */,
 				AE237D5C2897E58F00E14DE7 /* LaunchViewModel.swift in Sources */,
 				AEDAB8EE289A5C07001274A5 /* ContactListTableViewCell.swift in Sources */,
 				AE237D602897E7B300E14DE7 /* HomeViewController.swift in Sources */,

@@ -17,4 +17,12 @@ struct Contacts: Codable{
     var jobtitle: String?
     var favouriteColor: String?
     var id: String?
+    
+    func getFullName() -> String{
+        let firstname = self.firstName ?? ""
+        let lastname = self.lastName ?? ""
+        
+        return firstname + " " + lastname
+
+    }
 }

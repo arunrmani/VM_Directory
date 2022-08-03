@@ -60,9 +60,9 @@ extension APIClient{
   
     
         //Mark:- GET People list
-    typealias peopleResultCallBack = (Result<Contacts,APIError>)-> Void
+    typealias peopleResultCallBack = (Result<[Contacts],APIError>)-> Void
 
-    func getMostPopularArticle(completionHandler: @escaping  peopleResultCallBack){
+    func getPeopleList(completionHandler: @escaping  peopleResultCallBack){
         
         let url = self.createURL(baseURL: self.baseURl, urlType: .GET_PEOPLE_LIST)
         
@@ -82,9 +82,9 @@ extension APIClient{
     }
     
         //Mark:- GET Rooms list
-    typealias roomsResultCallBack = (Result<Rooms,APIError>)-> Void
+    typealias roomsResultCallBack = (Result<[Rooms],APIError>)-> Void
     
-    func getMostPopularArticle(completionHandler: @escaping  roomsResultCallBack){
+    func getRoomList(completionHandler: @escaping  roomsResultCallBack){
         
         let url = self.createURL(baseURL: self.baseURl, urlType: .GET_ROOMS_LIST)
         
@@ -136,7 +136,7 @@ extension APIClient{
     
     private func processGetPeopleList(data:Data,callBack:@escaping peopleResultCallBack){
         do{
-            let responseObj =  try JSONDecoder().decode(Contacts.self, from: data)
+            let responseObj =  try JSONDecoder().decode([Contacts].self, from: data)
             callBack(.success(responseObj))
         }
         catch let error{
@@ -148,7 +148,7 @@ extension APIClient{
 
     private func processGetRoomsList(data:Data,callBack:@escaping roomsResultCallBack){
         do{
-            let responseObj =  try JSONDecoder().decode(Rooms.self, from: data)
+            let responseObj =  try JSONDecoder().decode([Rooms].self, from: data)
             callBack(.success(responseObj))
         }
         catch let error{

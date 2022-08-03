@@ -7,12 +7,18 @@
 
 import UIKit
 
+
+
+
 class ContactListTableViewCell: UITableViewCell {
+    
+    static let identifier = "ContactListTableViewCell"
+    
+    @IBOutlet weak var image_avatar: UIImageView!
+    @IBOutlet weak var lbl_name: UILabel!
+    @IBOutlet weak var lbl_jobTitle: UILabel!
 
     override func awakeFromNib() {
-        
-        
-        
         super.awakeFromNib()
         // Initialization code
     }
@@ -21,6 +27,16 @@ class ContactListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setCellData(data : Contacts){
+        self.lbl_name.text = data.getFullName()
+        self.lbl_jobTitle.text = data.jobtitle ?? ""
+
+        if let imgUrl =  data.avatar{
+            self.image_avatar.imageFromServerURL(urlString: imgUrl, PlaceHolderImage: UIImage(named:"sampleContactAvatar")!)
+        }
+        
     }
 
 }

@@ -1,20 +1,37 @@
-//
-//  HomeViewModel.swift
-//  VM Directory
-//
-//  Created by Safe City Mac 001 on 01/08/2022.
-//
+    //
+    //  HomeViewModel.swift
+    //  VM Directory
+    //
+    //  Created by Safe City Mac 001 on 01/08/2022.
+    //
 
 import Foundation
+import UIKit
 
+enum ListType{
+    case contacts
+    case rooms
+}
 
 class HomeViewModel{
     
     var contactList: Observable<[Contacts?]> = Observable([])
     var roomsList: Observable<[Rooms?]> = Observable([])
     var goTodetails: Observable<Bool> = Observable(false)
+    var showError: Observable<APIError?> = Observable(nil)
     
     var selectedContact: Observable<Contacts?> = Observable(nil)
+    var selectedType: Observable<ListType?> = Observable(.contacts)
+    
+    var contactBgColor: Observable<UIColor?> = Observable(UIColor(named: "vm_theame_color_white"))
+    var contactTitleColor: Observable<UIColor?> = Observable(UIColor(named: "vm_theame_color_textBlack"))
+    
+    var roomBgColor: Observable<UIColor?> = Observable(UIColor(named: "vm_theame_color_white"))
+    var roomTitleColor: Observable<UIColor?> = Observable(UIColor(named: "vm_theame_color_textBlack"))
+    
+    
+    
+    
 
     var contactListCount: Int  {
         get{
@@ -52,13 +69,70 @@ class HomeViewModel{
             self.goTodetails.value = true
         }
     }
+    
+    func selectListType(type: ListType){
+        self.selectedType.value = type
+        self.updateSelectionType(type: type)
+        switch self.selectedType.value{
+            case .contacts:
+                self.getContactListAPI()
+            case .rooms:
+                self.getRoomListAPI()
+            case .none:
+                print("none")
+        }
+    }
+    
+    
+    private func updateSelectionType(type: ListType){
+        self.contactBgColor.value = UIColor(named: "vm_theame_color_white")
+        self.contactTitleColor.value = UIColor(named: "vm_theame_color_textBlack")
+        self.roomBgColor.value = UIColor(named: "vm_theame_color_white")
+        self.roomTitleColor.value = UIColor(named: "vm_theame_color_textBlack")
+        
+        switch type {
+            case .contacts:
+                self.contactBgColor.value = UIColor(named: "vm_theame_color_gray")
+                self.contactTitleColor.value = UIColor(named: "vm_theame_color_white")
+            case .rooms:
+                self.roomBgColor.value = UIColor(named: "vm_theame_color_gray")
+                self.roomTitleColor.value = UIColor(named: "vm_theame_color_white")
+        }
+    }
+   
+    
 }
 
 
-// MARK: - API Call
+    // MARK: - API Call
 
 extension HomeViewModel{
     func getContactListAPI(){
-        
+        ARMLoader.show()
+        APIClient.shared.getPeopleList {[weak self] result in
+            ARMLoader.hide()
+            switch result{
+                case .success(let responseObj):
+                    self?.contactList.value = responseObj
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    self?.showError.value = error
+            }
+        }
     }
+    
+    func getRoomListAPI(){
+        ARMLoader.show()
+        APIClient.shared.getRoomList {[weak self] result in
+            ARMLoader.hide()
+            switch result{
+                case .success(let responseObj):
+                    self?.roomsList.value = responseObj
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    self?.showError.value = error
+            }
+        }
+    }
+    
 }
