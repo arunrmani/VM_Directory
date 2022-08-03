@@ -102,6 +102,20 @@ class HomePageTests: XCTestCase {
         
     }
     
+    func test_searchBar() throws{
+        
+        let sut = try makeSUT()
+        sut.loadViewIfNeeded()
+        let btn = UIButton()
+        sut.searchBtnPress(btn)
+        XCTAssertEqual(sut.homeVM.searchEnable.value, true)
+        sut.searchBtnPress(btn)
+        XCTAssertEqual(sut.homeVM.searchEnable.value, false)
+        
+    }
+    
+    
+    
     
     
 }

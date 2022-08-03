@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class ContactDetailsViewModel{
+    var selectedContact: Observable<Contacts?> = Observable(nil)
+    init(selectedContact : Contacts){
+        self.selectedContact.value = selectedContact
+    }
+    
+    
+    
+    
+}

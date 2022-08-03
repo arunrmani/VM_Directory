@@ -18,11 +18,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var view_Room: UIView!
     @IBOutlet weak var lbl_Room: UILabel!
     
-    
+    @IBOutlet weak var btn_search: UIButton!
+
     
     var homeVM = HomeViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dismissKeyboard()
         self.bindviewModel()
         self.homeVM.selectListType(type: .contacts)
     }
@@ -31,7 +33,7 @@ class HomeViewController: UIViewController {
         
     }
     @IBAction func searchBtnPress(_ sender: UIButton) {
-        
+        self.homeVM.searchBtnPress()
     }
     @IBAction func contactBtnPress(_ sender: UIButton) {
         self.homeVM.selectListType(type: .contacts)
@@ -46,18 +48,14 @@ class HomeViewController: UIViewController {
 extension HomeViewController{
     private func bindviewModel(){
         self.homeVM.contactList.bind {[unowned self] dataList in
-            if dataList.count > 0{
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-            }
         }
         self.homeVM.roomsList.bind {[unowned self] dataList in
-            if dataList.count > 0{
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-            }
         }
         self.homeVM.goTodetails.bind { status in
             if status{
@@ -88,12 +86,27 @@ extension HomeViewController{
             }
         }
         
-        self.homeVM.selectedType.bind { type in
+        self.homeVM.selectedType.bind {[weak self] type in
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
+            }
+        }
+        self.homeVM.searchBarHeight.bind {[weak self] height in
+            DispatchQueue.main.async {
+                self?.searchBarHeight.constant = height
+            }
+        }
+        self.homeVM.searchBtnImage.bind {[weak self] img in
+            DispatchQueue.main.async {
+                self?.btn_search.setImage(img, for: .normal)
             }
         }
         
+        self.homeVM.searchText.bind {[weak self] searchText in
+            DispatchQueue.main.async {
+                self?.txt_search.text = searchText
+            }
+        }
         
     }
 }
@@ -110,12 +123,14 @@ extension HomeViewController: UITableViewDataSource ,UITableViewDelegate{
         switch self.homeVM.selectedType.value{
             case .contacts:
                 let cell = tableView.dequeueReusableCell(withIdentifier: ContactListTableViewCell.identifier, for: indexPath) as! ContactListTableViewCell
+                cell.selectionStyle = .none
                 if let contactData = self.homeVM.getContact(at: indexPath.row){
                     cell.setCellData(data: contactData)
                 }
                 return cell
             case .rooms:
                 let cell = tableView.dequeueReusableCell(withIdentifier: RoomsTableViewCell.identifier, for: indexPath) as! RoomsTableViewCell
+                cell.selectionStyle = .none
                 if let roomData = self.homeVM.getRoom(at: indexPath.row){
                     cell.setCellData(data: roomData)
                 }
@@ -144,5 +159,23 @@ extension HomeViewController: UITableViewDataSource ,UITableViewDelegate{
 
         }
     }
+    
+}
+
+// MARK: - TextFieldDelegate
+
+extension HomeViewController: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
+        
+        var searchText  = textField.text! + string
+        
+        if string  == "" {
+            searchText = (searchText as String).substring(to: searchText.index(before: searchText.endIndex))
+        }
+        self.homeVM.searchStringAction(str: searchText)
+        
+        return true
+    }
+
     
 }

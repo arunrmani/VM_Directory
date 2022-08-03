@@ -227,11 +227,7 @@
 				AEDAB8E4289A4AA7001274A5 /* API Client */,
 				AE237D592897E53C00E14DE7 /* Observable.swift */,
 				AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */,
-				AE759658289951CD002CBE25 /* Extension-Array.swift */,
-				AEDAB8E2289A499C001274A5 /* Extention-View.swift */,
-				AEDAB8EB289A4F29001274A5 /* Extension+ViewController.swift */,
-				AEDAB8F7289A6D49001274A5 /* Extension-UiimageView.swift */,
-				AEDAB8F9289A8A3F001274A5 /* Extension-String.swift */,
+				AEDAB8FB289A9175001274A5 /* Extension */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -302,6 +298,18 @@
 				AEDAB8F4289A5D1B001274A5 /* ARMLoaderView.xib */,
 			);
 			path = LoaderView;
+			sourceTree = "<group>";
+		};
+		AEDAB8FB289A9175001274A5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AEDAB8EB289A4F29001274A5 /* Extension+ViewController.swift */,
+				AEDAB8F7289A6D49001274A5 /* Extension-UiimageView.swift */,
+				AEDAB8F9289A8A3F001274A5 /* Extension-String.swift */,
+				AE759658289951CD002CBE25 /* Extension-Array.swift */,
+				AEDAB8E2289A499C001274A5 /* Extention-View.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

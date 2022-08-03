@@ -8,22 +8,36 @@
 import UIKit
 
 class ContactDetailsViewController: UIViewController {
+    
+    @IBOutlet weak var lbl_firstName: UILabel!
+    @IBOutlet weak var lbl_lastName: UILabel!
+    
+    @IBOutlet weak var lbl_jobTitle: UILabel!
+    @IBOutlet weak var lbl_email: UILabel!
+    @IBOutlet weak var lbl_favcolor: UILabel!
+    @IBOutlet weak var img_avatar: UIImageView!
+    
+    var detailsVM : ContactDetailsViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bindViewModel()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func closebtnPress(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
+    @IBAction func menuBtnPress(_ sender: UIButton) {
+        
+    }
+   
 
+}
+
+
+extension ContactDetailsViewController{
+    private func bindViewModel(){
+        
+    }
 }

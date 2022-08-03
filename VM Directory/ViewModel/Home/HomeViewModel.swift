@@ -29,8 +29,15 @@ class HomeViewModel{
     var roomBgColor: Observable<UIColor?> = Observable(UIColor(named: "vm_theame_color_white"))
     var roomTitleColor: Observable<UIColor?> = Observable(UIColor(named: "vm_theame_color_textBlack"))
     
+    var searchBarHeight: Observable<Double> = Observable(0.0)
+    var searchEnable: Observable<Bool> = Observable(false)
+    var searchBtnImage: Observable<UIImage?> = Observable(UIImage(named: "search_unselected"))
+    var searchText: Observable<String> = Observable("")
+
     
-    
+    var contactListArr: [Contacts] = []
+    var roomListArr: [Rooms] = []
+
     
 
     var contactListCount: Int  {
@@ -67,10 +74,12 @@ class HomeViewModel{
         if let sContact = self.getContact(at: index){
             self.selectedContact.value = sContact
             self.goTodetails.value = true
+            self.searchText.value = ""
         }
     }
     
     func selectListType(type: ListType){
+        self.searchText.value = ""
         self.selectedType.value = type
         self.updateSelectionType(type: type)
         switch self.selectedType.value{
@@ -83,7 +92,40 @@ class HomeViewModel{
         }
     }
     
+    func searchBtnPress(){
+        self.searchEnable.value = !self.searchEnable.value
+        self.searchBarHeight.value = self.searchEnable.value ? 75 : 0
+        self.searchBtnImage.value = self.searchEnable.value ? UIImage(named: "search_selected") : UIImage(named: "search_unselected")
+        if !self.searchEnable.value{
+            self.searchText.value = ""
+        }
+        
+    }
     
+    func searchStringAction(str: String){
+        if str.count == 0{
+            self.contactList.value = self.contactListArr
+            self.roomsList.value = self.roomListArr
+            return
+        }
+        switch self.selectedType.value{
+            case .contacts:
+                self.contactList.value = self.contactListArr.filter{ $0.firstName?.range(of: str, options: .caseInsensitive) != nil || $0.lastName?.range(of: str, options: .caseInsensitive) != nil
+                }
+            case .rooms:
+                self.roomsList.value = self.roomListArr.filter{ $0.id?.range(of: str, options: .caseInsensitive) != nil
+                }
+            case .none:
+                print("none")
+        }
+        
+        
+        
+    }
+}
+
+
+extension HomeViewModel{
     private func updateSelectionType(type: ListType){
         self.contactBgColor.value = UIColor(named: "vm_theame_color_white")
         self.contactTitleColor.value = UIColor(named: "vm_theame_color_textBlack")
@@ -99,8 +141,6 @@ class HomeViewModel{
                 self.roomTitleColor.value = UIColor(named: "vm_theame_color_white")
         }
     }
-   
-    
 }
 
 
@@ -114,6 +154,7 @@ extension HomeViewModel{
             switch result{
                 case .success(let responseObj):
                     self?.contactList.value = responseObj
+                    self?.contactListArr = responseObj
                 case .failure(let error):
                     print(error.localizedDescription)
                     self?.showError.value = error
@@ -128,6 +169,8 @@ extension HomeViewModel{
             switch result{
                 case .success(let responseObj):
                     self?.roomsList.value = responseObj
+                    self?.roomListArr = responseObj
+
                 case .failure(let error):
                     print(error.localizedDescription)
                     self?.showError.value = error
