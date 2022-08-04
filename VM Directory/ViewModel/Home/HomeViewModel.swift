@@ -103,6 +103,10 @@ class HomeViewModel{
     }
     
     func searchStringAction(str: String){
+        guard self.searchEnable.value else{
+            return
+        }
+        
         if str.count == 0{
             self.contactList.value = self.contactListArr
             self.roomsList.value = self.roomListArr

@@ -10,7 +10,7 @@ import XCTest
 
 class HomePageTests: XCTestCase {
 
-    func test_LoginViewIsLoaded() throws{
+    func test_homeViewIsLoaded() throws{
         _ = try makeSUT()
     }
     
@@ -87,6 +87,13 @@ class HomePageTests: XCTestCase {
         XCTAssertEqual(sut.homeVM.roomBgColor.value, UIColor(named: "vm_theame_color_gray"))
         XCTAssertEqual(sut.homeVM.contactBgColor.value, UIColor(named: "vm_theame_color_white"))
         XCTAssertEqual(sut.homeVM.selectedType.value, .rooms)
+        
+        
+        sut.contactBtnPress(btn)
+        
+        XCTAssertEqual(sut.homeVM.contactBgColor.value, UIColor(named: "vm_theame_color_gray"))
+        XCTAssertEqual(sut.homeVM.roomBgColor.value, UIColor(named: "vm_theame_color_white"))
+        XCTAssertEqual(sut.homeVM.selectedType.value, .contacts)
 
     }
         
@@ -114,6 +121,18 @@ class HomePageTests: XCTestCase {
         
     }
     
+    func test_MockData() throws{
+        let sut = try makeSUT()
+        sut.loadViewIfNeeded()
+        sut.homeVM.contactListArr = self.getSampleContactList()
+        XCTAssertNotNil(sut.txt_search.delegate,"Search Textfield deligate is nil")
+        let btn = UIButton()
+        sut.searchBtnPress(btn)
+        sut.homeVM.searchStringAction(str: "Maggie")
+        XCTAssertEqual(sut.homeVM.searchEnable.value, true)
+        XCTAssertEqual(sut.homeVM.contactListCount, 1)
+        
+    }
     
     
     

@@ -20,6 +20,12 @@ class  LaunchViewModel{
     func startLaunchAnimation(){
         self.checkInternet()
         self.setQuotes()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+            if !self.finishLaunchAnimation.value{
+                self.finishLaunchAnimation.value = self.readyToShowHomePage
+            }
+        })
+        
     }
     
     func goToNextViewController(){

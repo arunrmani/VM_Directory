@@ -9,9 +9,14 @@ import Foundation
 
 class ContactDetailsViewModel{
     var selectedContact: Observable<Contacts?> = Observable(nil)
-    init(selectedContact : Contacts){
-        self.selectedContact.value = selectedContact
+    
+    init(selectedContact : Contacts?){
+        if let contact = selectedContact{
+            self.selectedContact.value = contact
+        }
     }
+    
+    
     
     
     

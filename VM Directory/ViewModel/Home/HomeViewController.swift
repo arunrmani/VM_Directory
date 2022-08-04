@@ -42,20 +42,29 @@ class HomeViewController: UIViewController {
         self.homeVM.selectListType(type: .rooms)
     }
     
+        // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ContactDetailsViewController{
+            destination.detailsVM = ContactDetailsViewModel(selectedContact: self.homeVM.selectedContact.value)
+        }
+        
+    }
+    
 }
     // MARK: - VM Binding
 
 extension HomeViewController{
     private func bindviewModel(){
-        self.homeVM.contactList.bind {[unowned self] dataList in
+        self.homeVM.contactList.bind {[weak self] dataList in
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
         }
-        self.homeVM.roomsList.bind {[unowned self] dataList in
+        self.homeVM.roomsList.bind {[weak self] dataList in
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+                    self?.tableView.reloadData()
+                }   
         }
         self.homeVM.goTodetails.bind { status in
             if status{

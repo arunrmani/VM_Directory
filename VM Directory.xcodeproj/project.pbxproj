@@ -22,6 +22,7 @@
 		AE237D602897E7B300E14DE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D5F2897E7B300E14DE7 /* HomeViewController.swift */; };
 		AE237D622897E96E00E14DE7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE237D612897E96E00E14DE7 /* HomeViewModel.swift */; };
 		AE383F5B2899233B0031E7B1 /* sampleQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = AE383F5A2899233B0031E7B1 /* sampleQuotes.json */; };
+		AE63D642289B9EAB004AF5AA /* ContactDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE63D641289B9EAB004AF5AA /* ContactDetailsPage.swift */; };
 		AE759657289947D6002CBE25 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE759656289947D6002CBE25 /* Quotes.swift */; };
 		AE759659289951CD002CBE25 /* Extension-Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE759658289951CD002CBE25 /* Extension-Array.swift */; };
 		AE75965C289953FD002CBE25 /* JosefinSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE75965B289953FD002CBE25 /* JosefinSlab-Regular.ttf */; };
@@ -86,6 +87,7 @@
 		AE237D5F2897E7B300E14DE7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AE237D612897E96E00E14DE7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AE383F5A2899233B0031E7B1 /* sampleQuotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleQuotes.json; sourceTree = "<group>"; };
+		AE63D641289B9EAB004AF5AA /* ContactDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsPage.swift; sourceTree = "<group>"; };
 		AE759656289947D6002CBE25 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		AE759658289951CD002CBE25 /* Extension-Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Array.swift"; sourceTree = "<group>"; };
 		AE75965B289953FD002CBE25 /* JosefinSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSlab-Regular.ttf"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				AE237D3A2897DB5800E14DE7 /* VM_DirectoryTests.swift */,
 				AEC57FF92898FB3B00586876 /* HomePageTests.swift */,
+				AE63D641289B9EAB004AF5AA /* ContactDetailsPage.swift */,
 			);
 			path = "VM DirectoryTests";
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE237D3B2897DB5800E14DE7 /* VM_DirectoryTests.swift in Sources */,
+				AE63D642289B9EAB004AF5AA /* ContactDetailsPage.swift in Sources */,
 				AEC57FFA2898FB3B00586876 /* HomePageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
