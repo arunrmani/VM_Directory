@@ -175,3 +175,17 @@ extension UIView {
         }
     }
 }
+
+
+extension UITableView{
+    func reloadTableView() {
+        DispatchQueue.main.async(execute: {
+            self.reloadData()
+            self.setContentOffset(.zero, animated: true)
+            self.layoutIfNeeded()
+            if self.numberOfSections > 0 , self.numberOfRows(inSection: 0) > 0 {
+                self.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            }
+        })
+    }
+}

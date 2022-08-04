@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var btn_search: UIButton!
     @IBOutlet weak var view_search: UIView!
-
+    
     
     var homeVM = HomeViewModel()
     override func viewDidLoad() {
@@ -58,14 +58,14 @@ class HomeViewController: UIViewController {
 extension HomeViewController{
     private func bindviewModel(){
         self.homeVM.contactList.bind {[weak self] dataList in
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
+            DispatchQueue.main.async {
+                self?.tableView.reloadTableView()
+            }
         }
         self.homeVM.roomsList.bind {[weak self] dataList in
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }   
+            DispatchQueue.main.async {
+                self?.tableView.reloadTableView()
+            }
         }
         self.homeVM.goTodetails.bind { status in
             if status{
@@ -97,9 +97,7 @@ extension HomeViewController{
         }
         
         self.homeVM.selectedType.bind {[weak self] type in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
+            
         }
         self.homeVM.searchBarHeight.bind {[weak self] height in
             DispatchQueue.main.async {
@@ -159,7 +157,7 @@ extension HomeViewController: UITableViewDataSource ,UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        
         switch self.homeVM.selectedType.value{
             case .contacts:
                 self.homeVM.selectContact(index: indexPath.row)
@@ -167,13 +165,23 @@ extension HomeViewController: UITableViewDataSource ,UITableViewDelegate{
                 print("Room Selected")
             case .none:
                 print("none")
-
+                
         }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        UIView.animate(
+            withDuration: 0.1,
+            delay: 0.02 * Double(indexPath.row),
+            animations: {
+                cell.alpha = 1
+            })
     }
     
 }
 
-// MARK: - TextFieldDelegate
+    // MARK: - TextFieldDelegate
 
 extension HomeViewController: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
@@ -187,6 +195,6 @@ extension HomeViewController: UITextFieldDelegate{
         
         return true
     }
-
+    
     
 }

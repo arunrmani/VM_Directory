@@ -74,7 +74,6 @@ class HomeViewModel{
         if let sContact = self.getContact(at: index){
             self.selectedContact.value = sContact
             self.goTodetails.value = true
-            self.searchText.value = ""
         }
     }
     
