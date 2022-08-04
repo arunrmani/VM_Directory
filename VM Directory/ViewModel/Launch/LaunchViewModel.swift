@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class  LaunchViewModel{
@@ -14,13 +15,15 @@ class  LaunchViewModel{
     var quoteStr: Observable<String> = Observable("")
     var quoteAuthorStr: Observable<String> = Observable("")
     var isNetworkAvailable: Observable<Bool> = Observable(true)
-    
+    var borderImageHeight: Observable<Double> = Observable(0.0)
+
     private var readyToShowHomePage = false
 
     func startLaunchAnimation(){
         self.checkInternet()
         self.setQuotes()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+        self.borderImageHeight.value = UIScreen.main.bounds.height
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
             if !self.finishLaunchAnimation.value{
                 self.finishLaunchAnimation.value = self.readyToShowHomePage
             }

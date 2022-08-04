@@ -158,10 +158,20 @@ extension UIView {
 
 
 extension UIView {
-    func rotate(angle: CGFloat) {
-        let radians = angle / 180.0 * CGFloat.pi
-        let rotation = self.transform.rotated(by: radians);
-        self.transform = rotation
-    }
+  
+   
     
+    @IBInspectable
+        /// Should shadow rasterize of view; also inspectable from Storyboard.
+        /// cache the rendered shadow so that it doesn't need to be redrawn
+    var rotateAngle: CGFloat {
+        get {
+            return 0.0
+        }
+        set {
+            let radians = newValue / 180.0 * CGFloat.pi
+            let rotation = self.transform.rotated(by: radians);
+            self.transform = rotation
+        }
+    }
 }

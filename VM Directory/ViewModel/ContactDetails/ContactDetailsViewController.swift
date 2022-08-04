@@ -23,7 +23,6 @@ class ContactDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bindViewModel()
-        self.img_avatar.rotate(angle: -3)
     }
     
     @IBAction func closebtnPress(_ sender: UIButton) {

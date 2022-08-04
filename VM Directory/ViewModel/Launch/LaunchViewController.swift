@@ -13,6 +13,8 @@ class LaunchViewController: UIViewController {
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var lbl_quotes: UILabel!
     @IBOutlet weak var lbl_quotesAuthor: UILabel!
+    @IBOutlet weak var borderImgBarHeight: NSLayoutConstraint!
+    @IBOutlet weak var skipViewBarHeight: NSLayoutConstraint!
 
 
     var launchVM = LaunchViewModel()
@@ -24,7 +26,6 @@ class LaunchViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         launchVM.startLaunchAnimation()
-        self.lbl_quotes.rotate(angle: -3)
     }
 
     @IBAction func skipBtnAction(_ sender: UIButton) {
@@ -50,5 +51,15 @@ extension LaunchViewController{
                 self?.showAlert(title: "Network Error", message: "Network Not Available, Please Check Your Internet Connection")
             }
         }
+        launchVM.borderImageHeight.bind {[weak self] value in
+            UIView.animate(withDuration: 3) {
+                self?.borderImgBarHeight.constant = value
+                self?.skipViewBarHeight.constant = 107
+                self?.view.layoutIfNeeded()
+            }
+        }
+        
+        
+        
     }
 }
