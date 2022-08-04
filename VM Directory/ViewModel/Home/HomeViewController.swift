@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lbl_Room: UILabel!
     
     @IBOutlet weak var btn_search: UIButton!
+    @IBOutlet weak var view_search: UIView!
 
     
     var homeVM = HomeViewModel()
@@ -103,6 +104,7 @@ extension HomeViewController{
         self.homeVM.searchBarHeight.bind {[weak self] height in
             DispatchQueue.main.async {
                 self?.searchBarHeight.constant = height
+                self?.view_search.isHidden = height == 0
             }
         }
         self.homeVM.searchBtnImage.bind {[weak self] img in

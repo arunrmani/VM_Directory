@@ -24,7 +24,7 @@ class LaunchViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         launchVM.startLaunchAnimation()
-        self.lbl_quotes.rotate(angle: -5)
+        self.lbl_quotes.rotate(angle: -3)
     }
 
     @IBAction func skipBtnAction(_ sender: UIButton) {

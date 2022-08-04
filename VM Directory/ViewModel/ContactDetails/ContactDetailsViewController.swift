@@ -6,6 +6,7 @@
     //
 
 import UIKit
+import MessageUI
 
 class ContactDetailsViewController: UIViewController {
     
@@ -31,10 +32,11 @@ class ContactDetailsViewController: UIViewController {
     @IBAction func menuBtnPress(_ sender: UIButton) {
         
     }
-    
+    @IBAction func sentMailBtnPress(_ sender: UIButton) {
+        self.sendEmail()
+    }
     
 }
-
 
 extension ContactDetailsViewController{
     private func bindViewModel(){
@@ -50,5 +52,26 @@ extension ContactDetailsViewController{
                 }
             }
         }
+    }
+}
+
+
+    // MARK: - Sent Mail
+extension ContactDetailsViewController : MFMailComposeViewControllerDelegate{
+    private func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([self.detailsVM?.selectedContact.value?.email ?? ""])
+            mail.setMessageBody("", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            self.showAlert(title: "Error", message: "Something went wrong!!!")
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
 }
