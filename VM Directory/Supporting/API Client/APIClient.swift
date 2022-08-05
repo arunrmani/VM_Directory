@@ -24,6 +24,7 @@ class APIClient : NSObject{
             
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.invalidAPI))
+                semaphore.signal()
                 return
             }
             //print("API Status : \(httpResponse.statusCode)")
@@ -36,17 +37,25 @@ class APIClient : NSObject{
                     }
                     completion(.success(data))
                     semaphore.signal()
-                case 401:
-                    completion(.failure(.authenticationError))
-                    return
                 case 400:
                     completion(.failure(.badRequest))
+                    semaphore.signal()
+                    return
+                case 401:
+                    completion(.failure(.authenticationError))
+                    semaphore.signal()
+                    return
+                case 404:
+                    completion(.failure(.invalidAPI))
+                    semaphore.signal()
                     return
                 case 503:
                     completion(.failure(.serviceUnAvailable))
+                    semaphore.signal()
                     return
                 default:
                     completion(.failure(.unexpected(code: httpResponse.statusCode)))
+                    semaphore.signal()
                     return
             }
         }

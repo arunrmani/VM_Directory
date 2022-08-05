@@ -34,7 +34,7 @@ class HomeViewModel{
     var searchBtnImage: Observable<UIImage?> = Observable(UIImage(named: "search_unselected"))
     var searchText: Observable<String> = Observable("")
     
-    
+
      var contactListArr: [People] = []
      var roomListArr: [Rooms] = []
         

@@ -114,6 +114,14 @@ extension HomeViewController{
                 self?.txt_search.text = searchText
             }
         }
+        self.homeVM.showError.bind {[weak self] apiError in
+            DispatchQueue.main.async {
+                if apiError != nil{
+                    self?.showAlert(title: "API Error", message: apiError?.description ?? "Something went wrong!!!")
+                }
+            }
+        }
+        
         
     }
 }

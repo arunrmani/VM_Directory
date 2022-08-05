@@ -225,9 +225,9 @@
 		AE237D562897E1FF00E14DE7 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				AE75965A28995374002CBE25 /* Fonts */,
 				AE237D592897E53C00E14DE7 /* Observable.swift */,
 				AE237D5D2897E6EB00E14DE7 /* AppConstant.swift */,
+				AE75965A28995374002CBE25 /* Fonts */,
 				AEDAB8F2289A5D1B001274A5 /* LoaderView */,
 				AEDAB8E4289A4AA7001274A5 /* API Client */,
 				AEDAB8FB289A9175001274A5 /* Extension */,
