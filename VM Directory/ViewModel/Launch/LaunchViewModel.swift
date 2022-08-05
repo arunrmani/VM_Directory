@@ -2,7 +2,7 @@
 //  LaunchViewModel.swift
 //  VM Directory
 //
-//  Created by Safe City Mac 001 on 01/08/2022.
+//  Created by Arun R Mani on 01/08/2022.
 //
 
 import Foundation
@@ -37,7 +37,10 @@ class  LaunchViewModel{
     
 }
 
+// MARK: - Private Methods
+
 extension LaunchViewModel{
+    //Checking Internet
     private func checkInternet(){
         switch Network.reachability.status {
             case .unreachable:
@@ -49,7 +52,7 @@ extension LaunchViewModel{
                 self.readyToShowHomePage = true
         }
     }
-    
+    //Set Random quotes for motivation
     private func setQuotes(){
         if let quote = QuotesData.shared.getRandomQuote(){
             quoteStr.value = quote.quote ?? ""

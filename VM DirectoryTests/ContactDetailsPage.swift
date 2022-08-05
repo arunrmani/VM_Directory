@@ -2,7 +2,7 @@
     //  ContactDetailsPage.swift
     //  VM DirectoryTests
     //
-    //  Created by Safe City Mac 001 on 04/08/2022.
+    //  Created by Arun R Mani on 04/08/2022.
     //
 
 import XCTest
@@ -18,7 +18,7 @@ class ContactDetailsPageTests: XCTestCase {
         let sut = try makeSUT()
         sut.loadViewIfNeeded()
 
-        let contact = Contacts(createdAt: "2022-01-24T17:02:23.729Z", firstName: "Maggie", avatar: "https://randomuser.me/api/portraits/women/21.jpg", lastName: "Brekke", email: "Crystel.Nicolas61@hotmail.com", jobtitle: "Future Functionality Strategist", favouriteColor: "pink", id: "1")
+        let contact = People(createdAt: "2022-01-24T17:02:23.729Z", firstName: "Maggie", avatar: "https://randomuser.me/api/portraits/women/21.jpg", lastName: "Brekke", email: "Crystel.Nicolas61@hotmail.com", jobtitle: "Future Functionality Strategist", favouriteColor: "pink", id: "1")
         sut.detailsVM = ContactDetailsViewModel(selectedContact: contact)
         sut.viewDidLoad()
         

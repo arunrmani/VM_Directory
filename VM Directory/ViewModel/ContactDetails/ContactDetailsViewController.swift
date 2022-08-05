@@ -2,7 +2,7 @@
     //  ContactDetailsViewController.swift
     //  VM Directory
     //
-    //  Created by Safe City Mac 001 on 02/08/2022.
+    //  Created by Arun R Mani on 02/08/2022.
     //
 
 import UIKit
@@ -25,17 +25,21 @@ class ContactDetailsViewController: UIViewController {
         self.bindViewModel()
     }
     
+    // MARK: - Button Action
+    
     @IBAction func closebtnPress(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func menuBtnPress(_ sender: UIButton) {
-        
+        print("Menu Button Press")
     }
     @IBAction func sentMailBtnPress(_ sender: UIButton) {
         self.sendEmail()
     }
     
 }
+
+// MARK: - VM Biding
 
 extension ContactDetailsViewController{
     private func bindViewModel(){

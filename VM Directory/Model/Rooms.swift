@@ -2,7 +2,7 @@
 //  Rooms.swift
 //  VM Directory
 //
-//  Created by Safe City Mac 001 on 02/08/2022.
+//  Created by Arun R Mani on 02/08/2022.
 //
 
 import Foundation

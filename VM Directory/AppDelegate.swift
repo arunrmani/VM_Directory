@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  VM Directory
 //
-//  Created by Safe City Mac 001 on 01/08/2022.
+//  Created by Arun R Mani on 01/08/2022.
 //
 
 import UIKit
@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         //Network Reachability
         do {
             try Network.reachability = Reachability(hostname: "www.google.com")

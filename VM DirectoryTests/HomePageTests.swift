@@ -2,7 +2,7 @@
 //  HomePageTests.swift
 //  VM DirectoryTests
 //
-//  Created by Safe City Mac 001 on 02/08/2022.
+//  Created by Arun R Mani on 02/08/2022.
 //
 
 import XCTest
@@ -155,10 +155,10 @@ extension HomePageTests{
     }
     
     
-    private func getSampleContactList() -> [Contacts]{
-        let contact1 = Contacts(createdAt: "2022-01-24T17:02:23.729Z", firstName: "Maggie", avatar: "https://randomuser.me/api/portraits/women/21.jpg", lastName: "Brekke", email: "Crystel.Nicolas61@hotmail.com", jobtitle: "Future Functionality Strategist", favouriteColor: "pink", id: "1")
-        let contact2 = Contacts(createdAt: "2022-01-24T17:02:23.729Z", firstName: "Armando", avatar: "https://randomuser.me/api/portraits/women/21.jpg", lastName: "Weber", email: "Milton.Wisoky@gmail.com", jobtitle: "Principal Accounts Developer", favouriteColor: "pink", id: "2")
-        let contact3 = Contacts(createdAt: "2022-01-24T17:02:23.729Z", firstName: "Ceasar", avatar: "https://randomuser.me/api/portraits/women/21.jpg", lastName: "Turner", email: "Crystel.Nicolas61@hotmail.com", jobtitle: "Future Interactions Supervisor", favouriteColor: "pink", id: "3")
+    private func getSampleContactList() -> [People]{
+        let contact1 = People(createdAt: "2022-01-24T17:02:23.729Z", firstName: "Maggie", avatar: "https://randomuser.me/api/portraits/women/21.jpg", lastName: "Brekke", email: "Crystel.Nicolas61@hotmail.com", jobtitle: "Future Functionality Strategist", favouriteColor: "pink", id: "1")
+        let contact2 = People(createdAt: "2022-01-24T17:02:23.729Z", firstName: "Armando", avatar: "https://randomuser.me/api/portraits/women/21.jpg", lastName: "Weber", email: "Milton.Wisoky@gmail.com", jobtitle: "Principal Accounts Developer", favouriteColor: "pink", id: "2")
+        let contact3 = People(createdAt: "2022-01-24T17:02:23.729Z", firstName: "Ceasar", avatar: "https://randomuser.me/api/portraits/women/21.jpg", lastName: "Turner", email: "Crystel.Nicolas61@hotmail.com", jobtitle: "Future Interactions Supervisor", favouriteColor: "pink", id: "3")
         
         
         return [contact1,contact2,contact3]

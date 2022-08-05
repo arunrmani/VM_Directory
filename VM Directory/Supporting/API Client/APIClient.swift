@@ -2,7 +2,7 @@
     //  APIClient.swift
     //  VM Directory
     //
-    //  Created by Safe City Mac 001 on 01/08/2022.
+    //  Created by Arun R Mani on 01/08/2022.
     //
 
 import Foundation
@@ -60,7 +60,7 @@ extension APIClient{
   
     
         //Mark:- GET People list
-    typealias peopleResultCallBack = (Result<[Contacts],APIError>)-> Void
+    typealias peopleResultCallBack = (Result<[People],APIError>)-> Void
 
     func getPeopleList(completionHandler: @escaping  peopleResultCallBack){
         
@@ -136,7 +136,7 @@ extension APIClient{
     
     private func processGetPeopleList(data:Data,callBack:@escaping peopleResultCallBack){
         do{
-            let responseObj =  try JSONDecoder().decode([Contacts].self, from: data)
+            let responseObj =  try JSONDecoder().decode([People].self, from: data)
             callBack(.success(responseObj))
         }
         catch let error{

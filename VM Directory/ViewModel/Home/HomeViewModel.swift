@@ -2,7 +2,7 @@
     //  HomeViewModel.swift
     //  VM Directory
     //
-    //  Created by Safe City Mac 001 on 01/08/2022.
+    //  Created by Arun R Mani on 01/08/2022.
     //
 
 import Foundation
@@ -15,12 +15,12 @@ enum ListType{
 
 class HomeViewModel{
     
-    var contactList: Observable<[Contacts?]> = Observable([])
+    var contactList: Observable<[People?]> = Observable([])
     var roomsList: Observable<[Rooms?]> = Observable([])
     var goTodetails: Observable<Bool> = Observable(false)
     var showError: Observable<APIError?> = Observable(nil)
     
-    var selectedContact: Observable<Contacts?> = Observable(nil)
+    var selectedContact: Observable<People?> = Observable(nil)
     var selectedType: Observable<ListType?> = Observable(.contacts)
     
     var contactBgColor: Observable<UIColor?> = Observable(UIColor(named: "vm_theame_color_white"))
@@ -33,13 +33,11 @@ class HomeViewModel{
     var searchEnable: Observable<Bool> = Observable(false)
     var searchBtnImage: Observable<UIImage?> = Observable(UIImage(named: "search_unselected"))
     var searchText: Observable<String> = Observable("")
-
     
-    var contactListArr: [Contacts] = []
-    var roomListArr: [Rooms] = []
-
     
-
+     var contactListArr: [People] = []
+     var roomListArr: [Rooms] = []
+        
     var contactListCount: Int  {
         get{
             return self.contactList.value.count
@@ -51,7 +49,7 @@ class HomeViewModel{
         }
     }
     
-    func getContact(at index:Int) -> Contacts?{
+    func getContact(at index:Int) -> People?{
         guard contactListCount > 0 else{
             return nil
         }
@@ -121,11 +119,11 @@ class HomeViewModel{
             case .none:
                 print("none")
         }
-        
-        
-        
+
     }
 }
+
+// MARK: - Private methods
 
 
 extension HomeViewModel{
@@ -173,7 +171,7 @@ extension HomeViewModel{
                 case .success(let responseObj):
                     self?.roomsList.value = responseObj
                     self?.roomListArr = responseObj
-
+                    
                 case .failure(let error):
                     print(error.localizedDescription)
                     self?.showError.value = error

@@ -2,7 +2,7 @@
 //  VM_DirectoryUITests.swift
 //  VM DirectoryUITests
 //
-//  Created by Safe City Mac 001 on 01/08/2022.
+//  Created by Arun R Mani on 01/08/2022.
 //
 
 import XCTest
@@ -84,23 +84,12 @@ class VM_DirectoryUITests: XCTestCase {
         XCTAssertTrue(cell.exists)
         cell.tap()
         
-        XCUIApplication().buttons[" "].tap()
 
 
     }
 
     
-    func testNormalFlow3() throws {
-        
-        
-        let app = XCUIApplication()
-        app.staticTexts["Maggie"].tap()
-        app.staticTexts["Future Functionality Strategist"].tap()
-        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 2).buttons[" "].tap()
-
-        
-        
-    }
+   
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.

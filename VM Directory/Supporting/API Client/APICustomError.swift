@@ -2,7 +2,7 @@
 //  SDKError.swift
 //  DocumentReaderSDK
 //
-//  Created by Safe City Mac 001 on 17/11/2021.
+//  Created by Arun R Mani on 17/11/2021.
 //
 
 import Foundation

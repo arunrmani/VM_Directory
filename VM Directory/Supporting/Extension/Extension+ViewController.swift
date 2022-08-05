@@ -2,7 +2,7 @@
 //  Extension+ViewController.swift
 //  NY Articles
 //
-//  Created by Safe City Mac 001 on 23/12/2021.
+//  Created by Arun R Mani on 23/12/2021.
 //
 
 import Foundation

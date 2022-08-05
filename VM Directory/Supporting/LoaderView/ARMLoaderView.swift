@@ -2,7 +2,7 @@
 //  EFRLoaderView.swift
 //  DocumentReaderSDK
 //
-//  Created by Safe City Mac 001 on 28/07/2021.
+//  Created by Arun R Mani on 28/07/2021.
 //
 
 import Foundation

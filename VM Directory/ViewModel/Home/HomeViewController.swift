@@ -2,7 +2,7 @@
     //  HomeViewController.swift
     //  VM Directory
     //
-    //  Created by Safe City Mac 001 on 01/08/2022.
+    //  Created by Arun R Mani on 01/08/2022.
     //
 
 import UIKit
@@ -21,8 +21,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var btn_search: UIButton!
     @IBOutlet weak var view_search: UIView!
     
-    
     var homeVM = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dismissKeyboard()
@@ -30,8 +30,10 @@ class HomeViewController: UIViewController {
         self.homeVM.selectListType(type: .contacts)
     }
     
+        // MARK: - Button Action
+    
     @IBAction func menuBtnPress(_ sender: UIButton) {
-        
+        print("Menu Button Press")
     }
     @IBAction func searchBtnPress(_ sender: UIButton) {
         self.homeVM.searchBtnPress()
@@ -94,10 +96,6 @@ extension HomeViewController{
             DispatchQueue.main.async {
                 self?.lbl_Room.textColor = color
             }
-        }
-        
-        self.homeVM.selectedType.bind {[weak self] type in
-            
         }
         self.homeVM.searchBarHeight.bind {[weak self] height in
             DispatchQueue.main.async {
@@ -169,6 +167,7 @@ extension HomeViewController: UITableViewDataSource ,UITableViewDelegate{
         }
     }
     
+        //Cell Animation
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0
         UIView.animate(
@@ -185,16 +184,11 @@ extension HomeViewController: UITableViewDataSource ,UITableViewDelegate{
 
 extension HomeViewController: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
-        
         var searchText  = textField.text! + string
-        
         if string  == "" {
             searchText = (searchText as String).substring(to: searchText.index(before: searchText.endIndex))
         }
         self.homeVM.searchStringAction(str: searchText)
-        
         return true
     }
-    
-    
 }

@@ -2,24 +2,16 @@
 //  ContactDetailsViewModel.swift
 //  VM Directory
 //
-//  Created by Safe City Mac 001 on 02/08/2022.
+//  Created by Arun R Mani on 02/08/2022.
 //
 
 import Foundation
 
 class ContactDetailsViewModel{
-    var selectedContact: Observable<Contacts?> = Observable(nil)
-    
-    init(selectedContact : Contacts?){
+    var selectedContact: Observable<People?> = Observable(nil)
+    init(selectedContact : People?){
         if let contact = selectedContact{
             self.selectedContact.value = contact
         }
     }
-    
-    
-    
-    
-
-    
-    
 }

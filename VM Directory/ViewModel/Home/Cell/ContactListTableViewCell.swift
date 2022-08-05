@@ -2,13 +2,10 @@
 //  ContactListTableViewCell.swift
 //  VM Directory
 //
-//  Created by Safe City Mac 001 on 03/08/2022.
+//  Created by Arun R Mani on 03/08/2022.
 //
 
 import UIKit
-
-
-
 
 class ContactListTableViewCell: UITableViewCell {
     
@@ -29,14 +26,12 @@ class ContactListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCellData(data : Contacts){
+    func setCellData(data : People){
         self.lbl_name.text = data.getFullName()
         self.lbl_jobTitle.text = data.jobtitle ?? ""
 
         if let imgUrl =  data.avatar{
             self.image_avatar.imageFromServerURL(urlString: imgUrl, PlaceHolderImage: UIImage(named:"sampleContactAvatar")!)
         }
-        
     }
-
 }
