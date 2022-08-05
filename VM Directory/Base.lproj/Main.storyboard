@@ -52,9 +52,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDJ-zq-IGp">
                                 <rect key="frame" x="40" y="327" width="334" height="242"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5h-DH-mFK">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5h-DH-mFK">
                                         <rect key="frame" x="-14" y="8" width="362" height="226"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="vm_theame_color_lightgray"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -91,15 +90,19 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="g5h-DH-mFK" firstAttribute="top" secondItem="TDJ-zq-IGp" secondAttribute="top" constant="8" id="6CQ-Fl-fIQ"/>
                                     <constraint firstItem="g87-Bp-jEa" firstAttribute="top" secondItem="TDJ-zq-IGp" secondAttribute="top" constant="-19" id="6LT-Jn-dfj"/>
                                     <constraint firstAttribute="trailing" secondItem="wW2-G2-ZPf" secondAttribute="trailing" constant="21" id="6O7-so-Sfy"/>
+                                    <constraint firstAttribute="bottom" secondItem="g5h-DH-mFK" secondAttribute="bottom" constant="8" id="8JE-37-tfZ"/>
                                     <constraint firstItem="wW2-G2-ZPf" firstAttribute="leading" secondItem="TDJ-zq-IGp" secondAttribute="leading" constant="20" symbolic="YES" id="D9n-6j-HxA"/>
                                     <constraint firstAttribute="bottom" secondItem="g87-Bp-jEa" secondAttribute="bottom" constant="-18" id="GUL-AL-yGB"/>
                                     <constraint firstItem="wW2-G2-ZPf" firstAttribute="top" secondItem="TDJ-zq-IGp" secondAttribute="top" constant="32" id="LyF-Zn-s9P"/>
+                                    <constraint firstAttribute="trailing" secondItem="g5h-DH-mFK" secondAttribute="trailing" constant="-14" id="Of4-Xs-Ulf"/>
                                     <constraint firstItem="g87-Bp-jEa" firstAttribute="leading" secondItem="TDJ-zq-IGp" secondAttribute="leading" constant="-14" id="Pn9-Mg-Lj0"/>
                                     <constraint firstAttribute="bottom" secondItem="fDZ-NJ-Q0I" secondAttribute="bottom" constant="22" id="eYy-MV-sey"/>
                                     <constraint firstAttribute="trailing" secondItem="g87-Bp-jEa" secondAttribute="trailing" constant="-14" id="j3C-54-xop"/>
                                     <constraint firstItem="fDZ-NJ-Q0I" firstAttribute="centerX" secondItem="TDJ-zq-IGp" secondAttribute="centerX" id="pg3-rf-Jbh"/>
+                                    <constraint firstItem="g5h-DH-mFK" firstAttribute="leading" secondItem="TDJ-zq-IGp" secondAttribute="leading" constant="-14" id="tGf-Ia-nAj"/>
                                     <constraint firstItem="fDZ-NJ-Q0I" firstAttribute="top" secondItem="wW2-G2-ZPf" secondAttribute="bottom" constant="8" symbolic="YES" id="vqb-lj-0fC"/>
                                     <constraint firstAttribute="width" secondItem="TDJ-zq-IGp" secondAttribute="height" multiplier="333:241" id="zw3-LU-uSG"/>
                                 </constraints>
@@ -856,13 +859,13 @@
         <image name="details_border" width="316" height="188"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="logo" width="180" height="37"/>
-        <image name="logo_red" width="100" height="22"/>
+        <image name="logo_red" width="100" height="21"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="quotes_board" width="377" height="264"/>
         <image name="room_sample" width="42" height="42"/>
         <image name="search_unselected" width="56" height="56"/>
-        <image name="side_menu" width="28" height="20"/>
+        <image name="side_menu" width="27" height="19"/>
         <image name="skip_button" width="227" height="79"/>
         <image name="skip_button_arrow" width="18" height="16"/>
         <namedColor name="vm_theame_color_gray">
@@ -875,7 +878,7 @@
             <color red="0.89800000190734863" green="0.9100000262260437" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="vm_theame_color_red">
-            <color red="0.76862745098039209" green="0.0078431372549019607" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.76899999380111694" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="vm_theame_color_textgray">
             <color red="0.4309999942779541" green="0.45100000500679016" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
